@@ -1,0 +1,523 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+/* nav bar styling */
+
+.navbar{
+    position:fixed;
+    z-index: 25;
+    width: 100%;
+    font-family: 'Oswald', sans-serif;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    display:flex;
+    transition: all 0.3s ease;
+    background-color: #0c161b;
+    background-size: cover;
+}
+
+/* logo */
+.navbar .logo{
+    float:left;
+    max-width:20%;
+    margin-left:10%;
+    margin-right:30%;
+
+}
+
+.navbar .logo p{
+    font-size: 35px;
+    font-weight: 600;
+    color:#00f40c;
+}
+
+.navbar .logo img {
+    width:30%;
+    float:left;
+    display:block;
+}
+
+.navbar.sticky{
+    background: #0c161b;
+    padding-bottom: 10px;
+    padding-top: 20px;
+}
+/* buttons */
+
+.navbar .menu li a{
+    color: white;
+    
+}
+
+.buttons{
+    transition: transform 0.3s ease;
+    padding: 10px 25px;
+    margin: 10px;
+    border-radius: 20px;
+    font-size: 15px;
+    cursor:pointer;
+    background:#00f40c;
+}
+/* button animation */
+
+.buttons::after, .buttons::before{
+    content:"";
+    position: absolute;
+    opacity: 0.3;
+
+    border-radius: inherit;
+    width: 100%;
+    height:100%;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: transform 0.3s ease;
+
+}
+
+.buttons:hover{
+    transform: translate(-12px, -12px);
+    background:#00f40c;
+}
+
+.buttons:hover::after{
+    transform: translate(6px, 6px);
+    background:#00f40c;
+}
+
+.buttons:hover::before{
+    transform: translate(12px, 12px);
+    background:#00f40c;
+}
+
+/* buttons alignment */
+
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+}
+
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin:auto;
+}
+
+.navbar .max-width{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+
+/* menu btn styling */
+
+.menu-btn{
+    color:#00f40c;
+    font-size:27px;
+    cursor:pointer;
+    display:none;
+}
+
+.home .container .cover{
+    background-color: #000000d2;
+    width:100%;
+    height:100%;
+    z-index:2;
+}
+
+.home .container .max-width h1{
+    font-style:italic;
+    font-size: 80px;
+    font-family: 'Oswald', sans-serif;
+    color:white;
+    text-align:center;
+    justify-content: center;
+    z-index: -1;
+    animation: opening 3s ease 0s 1 normal;
+}
+
+.home .container .max-width p{
+    font-size: 20px;
+    font-family:'Poppins', sans-serif;
+    color:white;
+    text-align:center;
+    justify-content: center;
+    margin: 10px 10px 10px 10px;
+    animation: opening 3s ease 0s 1 normal;
+}
+
+.home .container{
+    height:100vh;
+    width:100%;
+    background-image: url(Assets/ImageReels/BG1.png);
+    background-size:cover;
+    background-repeat: no-repeat;
+    transition: all 5s ease-in-out;
+    animation-name: reel;
+    animation-direction:alternate-reverse;
+    animation-duration:30s;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+    animation-iteration-count:infinite;
+    animation-timing-function: ease-in-out;
+    display:flex;
+}
+
+.info{
+    padding: 30px 30px 30px 30px;
+}
+
+.info .max-width h1{
+    text-align:center;
+    font-size:30px;
+    font-family: 'Oswald', sans-serif;
+    border: 4px solid black;
+    margin-top:40px;
+    padding-top:10px;
+    padding-bottom:10px;
+    margin-bottom:40px;
+    letter-spacing:10px;
+    animation: opening2 3s ease 0s 1 normal;
+}
+
+.info .information{
+    display:flex;
+}
+
+.info .information .map .ph{
+    max-width:20vw;
+
+}
+
+.info .information .words h1{
+    font-size: 50px;
+    font-family: 'Oswald', sans-serif;
+    color:black;
+    text-align:center;
+    justify-content: center;
+    z-index: -1;
+    animation: opening 3s ease 0s 1 normal;
+}
+
+.info .information .words h1 span{
+    font-family: 'Oswald', sans-serif;
+    color:#b00000;
+    text-align:center;
+    justify-content: center;
+    z-index: -1;
+    animation: opening 3s ease 0s 1 normal;
+}
+
+.info .information .words p{
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    color:black;
+    z-index: -1;
+    animation: opening 3s ease 0s 1 normal;
+    line-height:40px;
+    margin-top: 5px;
+}
+
+.help{
+    background-color:rgb(21, 21, 21);
+    padding: 30px 30px 30px 30px;
+}
+
+.help .max-width h1{
+    color:#00f40c;
+    font-size: 35px;
+    font-weight: 600;
+    text-align:center;
+    font-family: 'Oswald', sans-serif;
+    margin: 10px 10px 10px 10px; 
+    margin-top:40px;
+    padding-top:10px;
+    padding-bottom:10px;
+    margin-bottom:40px;
+    letter-spacing:10px;
+    animation: opening3 3s ease 0s 1 normal;
+
+}
+
+.help .card{
+    width: calc(33% - 20px);
+    background:black;
+    color: white;
+    text-align: center;
+    border-radius: 6px;
+    padding: 20px 25px;
+    cursor: default;
+    transition: color 0.9s ease;
+    border: 4px solid black;
+    border-radius: 3px;
+    display:inline-block; margin-left: 10px;
+    animation: open 3s ease 0s 1 normal;
+
+}
+
+
+.help .card:hover{
+    background:white;
+    color:black;
+}
+
+.help .card .box .text{
+    font-family: 'Oswald', sans-serif;
+    font-size: 30px
+}
+
+.help .card .box p{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.help .card .box i{
+    font-size: 27px;
+
+    margin: 20px;
+}
+
+.help .card .box p{
+    margin: 20px;
+}
+
+@keyframes reel{
+    0% {
+        background-image: url(Assets/ImageReels/BG1.png);
+    }
+    25% {
+        background-image: url(Assets/ImageReels/BG2.png);
+    }
+    50% {
+        background-image: url(Assets/ImageReels/BG3.png);
+    }
+    75% {
+        background-image: url(Assets/ImageReels/BG4.png);
+    }
+    100% {
+        background-image: url(Assets/ImageReels/BG5.png);
+    }
+}
+
+@media only screen and (max-width: 840px) {
+    .max-width{
+        padding: 0 20px;
+    }
+
+    .menu-btn{
+        color:#00f40c;
+        font-size:27px;
+        cursor:pointer;
+        display:block;
+        z-index:999;
+        margin-left:90px;
+    }
+
+    .menu-btn i.active:before{
+        content: '\f00d';
+    }
+    
+
+    .navbar .menu{
+        position:fixed;
+        background: #0c161b90;
+        height: 100vh;
+        width: 100%;
+        left:-100%;
+        top:0;
+        padding-top:100px;
+        transition: all 0.3s ease;
+
+    }
+
+    .navbar .menu .active{
+        left:0;
+    }
+
+
+    .navbar .menu .buttons{
+        padding: 5px 15px;
+        margin: 7px;
+        border-radius: 20px;
+        font-size: 12px;
+        text-align:center;
+        cursor:pointer;
+        margin-bottom: 10px;
+
+    }
+
+    .navbar .logo{
+        float:left;
+        max-width:30%;
+        margin-left:10%;
+        margin-right:10%;
+        font-size: 20px;
+    }
+    
+    .navbar .logo img {
+        width:60%;
+        float:left;
+        display:block;
+    }
+
+    .navbar .logo p{
+        font-size: 28px;
+    }
+
+
+
+    .navbar .menu li{
+        display:block;
+    }
+
+    .navbar .menu li a{
+        display:inline-block;
+    }
+    
+
+    .info .max-width h1{
+        text-align:center;
+        font-size:30px;
+        font-family: 'Oswald', sans-serif;
+        border: 4px solid black;
+        margin-top:40px;
+        padding-top:10px;
+        padding-bottom:10px;
+        margin-bottom:40px;
+        letter-spacing:10px;
+        animation: opening2 3s ease 0s 1 normal;
+    }
+
+    .info .max-width h1{
+        text-align:center;
+        font-size:20px;
+        font-family: 'Oswald', sans-serif;
+        border: 4px solid black;
+        margin-top:40px;
+        padding-top:10px;
+        padding-bottom:10px;
+        margin-bottom:40px;
+        letter-spacing:5px;
+        animation: opening2 3s ease 0s 1 normal;
+    }
+
+    .info .information .map .ph{
+        max-width:40vw;
+    
+    }
+    
+    .info .information .words h1{
+        display:block;
+        font-size:20px;
+    }
+    
+    .info .information .words h1 span{
+        font-family: 'Oswald', sans-serif;
+        color:#b00000;
+        text-align:center;
+        justify-content: center;
+        z-index: -1;
+        animation: opening 3s ease 0s 1 normal;
+    }
+
+    .info .information .words p{
+        font-size: 10px;
+        font-family: 'Poppins', sans-serif;
+        color:black;
+        z-index: -1;
+        animation: opening 3s ease 0s 1 normal;
+        line-height:20px;
+        margin-top: 5px;
+    }
+
+    .info .information .words .part2 p{
+        display:block;
+        margin-top:20px;
+    }
+    
+    .help .card{
+        width: 300px;
+        margin-left: 35px;
+        margin-bottom: 20px;
+    
+
+    }
+
+    .help .card:hover{
+        background:white;
+        color:black;
+    }
+
+    .help .card .box .text{
+        font-family: 'Oswald', sans-serif;
+        font-size: 20px
+    }
+    .help .card .box i{
+        margin: 10px;
+    }
+
+    .help .card .box p{
+        margin: 10px;
+    }
+
+    .help .text-c{
+        font-family: 'Oswald', sans-serif;
+        font-size: 30px;
+        padding: 30px;
+        margin-top:20px;
+        text-align:center;
+        text-decoration:underline;
+    
+    }
+
+}
+
+@media only screen and (max-width: 414px) {
+    .help .card{
+        width: 30px;
+        margin-left: 35px;
+        margin-bottom: 20px;
+    
+
+    }
+  
+
+
+
+    
+}
+
+@media only screen and (max-width: 320px) {
+    .help .card{
+        width: 200px;
+        margin-left: 35px;
+        margin-bottom: 20px;
+    
+
+    }
+
+    
+}
+
+@keyframes opening{
+    from {color: #00000000;}
+    to {color:white;}
+}
+
+@keyframes opening2{
+    from {color: #00000000;}
+    to {color:black;}
+}
+
+@keyframes opening3{
+    from {color: #00000000;}
+    to {color:#00f40c;}
+}
+
+
